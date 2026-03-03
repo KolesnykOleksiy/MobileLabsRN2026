@@ -23,7 +23,7 @@
 
 1.  **Клонування репозиторію:**
     ```bash
-    git clone [https://github.com/ВашЛогін/MobileLabsRN2026.git](https://github.com/ВашЛогін/MobileLabsRN2026.git)
+    git clone [git@github.com:KolesnykOleksiy/MobileLabsRN2026.git](https://github.com/KolesnykOleksiy/MobileLabsRN2026.git)
     cd MobileLabsRN2026/lab1
     ```
 2.  **Встановлення залежностей:**
