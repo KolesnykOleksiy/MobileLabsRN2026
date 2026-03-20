@@ -11,11 +11,11 @@ const CustomDrawerContent = (props) => {
     <DrawerContentScrollView {...props}>
       <View style={styles.profileContainer}>
         <Image
-          source={{ uri: 'https://i.pravatar.cc/150?u=user1' }}
+          source={require('../assets/avatar.png')}
           style={styles.avatar}
         />
-        <Text style={styles.userName}>Oleksii Kolesnik</Text>
-        <Text style={styles.groupName}>Group: CS-401</Text>
+        <Text style={styles.userName}>Oleksii Kolesnyk</Text>
+        <Text style={styles.groupName}>Group: VT-22-2</Text>
       </View>
       <DrawerItemList {...props} />
     </DrawerContentScrollView>
