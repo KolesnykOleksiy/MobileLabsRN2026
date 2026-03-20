@@ -1,48 +1,72 @@
-# Gesture Clicker (Lab 3)
+# Лабораторна робота №3: Використання кастомних жестів у React Native та стилізація інтерфейсу мобільного застосунку.
 
-## Introduction
-'Gesture Clicker' is a React Native mobile application designed to demonstrate the usage of `react-native-gesture-handler` for advanced user interactions.
+## Мета: 
+Навчитися працювати з жестами користувача у мобільному застосунку, реалізувати взаємодію через різні типи жестів та застосувати сучасні підходи стилізації у React Native.
 
-## Functionality
-- **Home Screen**:
-  - A score counter that updates in real-time.
-  - An interactive object responding to various gestures:
-    - **Single Tap**: +1 point.
-    - **Double Tap**: +5 points (Double point bonus).
-    - **Long Press**: +20 points (Hold for bonus).
-    - **Pan (Drag)**: Drag the object around the screen.
-    - **Fling (Swipe)**: Swipe left or right for a random bonus (0-50 points).
-    - **Pinch (Scale)**: Resize the object to get +10 points.
-- **Challenges Screen**:
-  - Tracks 8 different tasks including tap counts, holding duration, dragging, swiping, and reaching a score goal.
-  - Visual feedback for completed tasks.
-- **Settings Screen**:
-  - Toggle between Light and Dark themes.
-  - Displays application version.
+## Інструкція запуску
 
-## Technical Stack
-- **React Native** (Expo)
-- **React Navigation**: Bottom Tab Navigation.
-- **React Native Gesture Handler**: `GestureDetector` API (v2).
-- **Styled Components**: Theme-based styling.
-- **React Context API**: State management for scores, challenges, and themes.
+Для запуску проекту необхідно мати встановлений [Node.js](https://nodejs.org/) та [Expo CLI](https://docs.expo.dev/get-started/installation/).
 
-## Installation and Launch
-1. Clone the repository and navigate to the `lab3` directory.
-2. Install dependencies:
+1. **Клонування репозиторію:**
+   ```bash
+   git clone <url-вашого-репозиторію>
+   cd lab3
+   ```
+
+2. **Встановлення залежностей:**
    ```bash
    npm install
    ```
-3. Start the application:
+
+3. **Запуск застосунку:**
    ```bash
    npx expo start
    ```
-4. Use the Expo Go app on your phone or an emulator to run the project.
 
-## Screenshots
-[Placeholder for Home Screen]
-[Placeholder for Challenges Screen]
-[Placeholder for Settings Screen]
+4. **Використання:**
+   - Відскануйте QR-код за допомогою застосунку **Expo Go** на вашому смартфоні (Android/iOS).
+   - Або натисніть `a` для запуску на Android-емуляторі чи `i` для iOS-симулятора.
 
-## Conclusion
-This lab project successfully implements complex touch interactions using `react-native-gesture-handler`. It demonstrates how to integrate multiple simultaneous and exclusive gestures on a single element while maintaining a clean state management approach using React Context.
+## Реалізований функціонал
+
+### 1. Навігація (React Navigation)
+У проекті реалізована нижня панель навігації (**Bottom Tab Navigator**) з трьома основними екранами:
+- **Home (Головна):** Центр взаємодії з об'єктом.
+- **Challenges (Завдання):** Список досягнень та прогрес їх виконання.
+- **Settings (Налаштування):** Керування зовнішнім виглядом застосунку.
+
+### 2. Система жестів (React Native Gesture Handler)
+Головний екран містить інтерактивну область, що реагує на наступні жести:
+- **Одинарний тап:** Нарахування +1 бала.
+- **Подвійний тап:** Нарахування +5 балів.
+- **Довге натискання (Long Press):** Нарахування +20 балів.
+- **Перетягування (Pan):** Переміщення об'єкта по екрану з поверненням у центр.
+- **Свайпи вліво/вправо (Fling):** Нарахування випадкової кількості балів.
+- **Щипок (Pinch):** Зміна масштабу (розміру) об'єкта.
+
+### 3. Стан та Контекст (Context API)
+- **ScoreContext:** Зберігає поточну кількість балів та стан виконання челенджів. Дані оновлюються в реальному часі на всіх екранах.
+- **ThemeContext:** Керує глобальною темою застосунку (світла/темна).
+
+### 4. Стилізація (Styled-components)
+Використано бібліотеку `styled-components` для динамічного керування кольорами та стилями залежно від обраної теми.
+
+## Скріншоти роботи застосунку
+
+![img.png](img.png)
+
+![img_1.png](img_1.png)
+
+![img_2.png](img_2.png)
+
+![img_3.png](img_3.png)
+
+![img_4.png](img_4.png)
+## Висновки
+У ході виконання лабораторної роботи було опановано:
+1. Роботу з бібліотекою `react-native-gesture-handler` для обробки складних жестів (тапи, свайпи, перетягування, масштабування).
+2. Побудову зручної навігації в мобільному застосунку за допомогою `@react-navigation/bottom-tabs`.
+3. Використання `Context API` для ефективного керування глобальним станом (бали, завдання, теми) без "prop drilling".
+4. Динамічну стилізацію компонентів за допомогою `styled-components`, що дозволило легко реалізувати підтримку темної та світлої тем.
+
+Проект демонструє сучасні підходи до розробки інтерактивних інтерфейсів на React Native.
