@@ -60,7 +60,7 @@ const RootNavigator = () => {
         name="News"
         component={NewsStack}
         options={{
-          headerShown: false, // Hide drawer header to avoid double header
+          headerShown: false,
         }}
       />
       <Drawer.Screen
